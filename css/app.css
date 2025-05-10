@@ -1,0 +1,194 @@
+/* Modern Base Styles */
+:root {
+    --primary: #8E24AA;
+    --primary-light: #BB6BC9;
+    --primary-dark: #5c007a;
+    --secondary: #00BCD4;
+    --secondary-light: #62EFFF;
+    --secondary-dark: #008BA3;
+    --accent: #FFC107;
+    --success: #4CAF50;
+    --error: #F44336;
+    --warning: #FF9800;
+    --info: #2196F3;
+    --text-primary: #212121;
+    --text-secondary: #6D6D6D;
+    --background: #f8f9fb;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Blazor-specific inputs styling */
+.valid.modified:not([type=checkbox]) {
+    outline: none;
+    border-color: var(--success);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.invalid {
+    outline: none;
+    border-color: var(--error);
+    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
+}
+
+.validation-message {
+    color: var(--error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Error UI */
+#blazor-error-ui {
+    color-scheme: light only;
+    background: rgba(255, 152, 0, 0.95);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    bottom: 0;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.7rem 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+#blazor-error-ui .dismiss:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.blazor-error-boundary {
+    background: linear-gradient(135deg, #F44336, #B71C1C);
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    color: white;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.blazor-error-boundary::before {
+    content: "⚠️";
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+    font-weight: 500;
+}
+
+/* Loading UI */
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 20vh auto 1rem auto;
+    filter: drop-shadow(0 0 15px rgba(142, 36, 170, 0.3));
+}
+
+.loading-progress circle {
+    fill: none;
+    stroke: #f3f3f3;
+    stroke-width: 0.6rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+.loading-progress circle:last-child {
+    stroke: url(#gradient);
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.5rem) 0 auto 0.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.loading-progress-text:after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+
+/* Code styles */
+code {
+    color: var(--primary);
+    background-color: rgba(142, 36, 170, 0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Form Controls */
+.form-floating > .form-control-plaintext::placeholder, 
+.form-floating > .form-control::placeholder {
+    color: var(--text-secondary);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, 
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Loading SVG Gradient Definition */
+svg {
+    position: relative;
+}
+
+svg defs {
+    position: absolute;
+}
