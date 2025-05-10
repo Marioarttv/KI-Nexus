@@ -1,9 +1,9 @@
 {
   "mainAssemblyName": "KI_Nexus",
   "resources": {
-    "hash": "sha256-Os2VG076z/sTbRwOEDN7kuCFw9lcohQaP2zPJdXWBxU=",
+    "hash": "sha256-ONd0Jb+IQWh851Vq6ENQZUW+wnJmwzk810WkuQoMSho=",
     "fingerprinting": {
-      "KI_Nexus.dxb6ek8jzu.wasm": "KI_Nexus.wasm",
+      "KI_Nexus.waql1ne7p7.wasm": "KI_Nexus.wasm",
       "Microsoft.AspNetCore.Components.2h8qnno30z.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.g92tul72wl.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.pq7fdyw1tb.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -63,7 +63,7 @@
       "System.Runtime.InteropServices.JavaScript.x50649m5t2.wasm": "sha256-VS4CSyZJNRAj+SrJqgbXBFWlGMlNDgM4rbwJ6gTH5qg="
     },
     "assembly": {
-      "KI_Nexus.dxb6ek8jzu.wasm": "sha256-4V8yu6NCQB8FM0KoTRjByJU7GIfNlZTtFRtXM85Iyvc=",
+      "KI_Nexus.waql1ne7p7.wasm": "sha256-aHWZubw4nyJu0D6GrodP/lM9ByteZt4rJPYJ3Q6NR1E=",
       "Microsoft.AspNetCore.Components.2h8qnno30z.wasm": "sha256-mt9qhO3ZdMG+ONqeBNxayQOwpaA0nsG05/BszZApNJg=",
       "Microsoft.AspNetCore.Components.Web.g92tul72wl.wasm": "sha256-tPIOFMZjBzAkwM4VRfWPT3s7Y9lOnm+oO0JMCSy9p4A=",
       "Microsoft.AspNetCore.Components.WebAssembly.pq7fdyw1tb.wasm": "sha256-D/ZUWrvE7bqOtBfOWuLj+4RNqOvNZ0SnjD6QrBwUcb8=",

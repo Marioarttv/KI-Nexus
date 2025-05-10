@@ -5,7 +5,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KI_Nexus</title>
-    <base href="/KI-Nexus/" />
+    <!-- dynamically choose base href -->
+    <script>
+        const base = document.createElement('base');
+        const host = location.hostname;
+        // on localhost or 127.0.0.1, serve from root:
+        if (host === 'localhost' || host === '127.0.0.1') {
+            base.href = '/';
+        } else {
+            // on GH‑Pages user/project site:
+            base.href = '/KI-Nexus/';
+        }
+        document.head.prepend(base);
+    </script>
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- If you add any scoped CSS files, uncomment the following to load them
